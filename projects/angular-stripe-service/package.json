@@ -1,0 +1,30 @@
+{
+  "name": "@fireflysemantics/angular-stripe-service",
+  "version": "1.0.1",
+  "author": "Ole Ersoy",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/fireflysemantics/angular-stripe-service/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fireflysemantics/angular-stripe-service.git"
+  },
+  "keywords": [
+    "Light Weight",
+    "Javascript",
+    "Typescript",
+    "Angular",
+    "React",
+    "Vue",
+    "State",
+    "Query",
+    "Reactive",
+    "RxJS",
+    "Observables",
+    "Multicasting"
+  ]
+}

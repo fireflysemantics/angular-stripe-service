@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-stripe-service": {
+      "projectType": "library",
+      "root": "projects/angular-stripe-service",
+      "sourceRoot": "projects/angular-stripe-service/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-stripe-service/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-stripe-service/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-stripe-service/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-stripe-service/src/test.ts",
+            "tsConfig": "projects/angular-stripe-service/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-stripe-service/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-stripe-service"
 }
