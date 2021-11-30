@@ -1,6 +1,14 @@
 # Angular Stripe Service
 
-Stripe service for for Angular components that use stripe.
+Stripe service used to integrate Stripe Elements with Angular.
+
+## Documentation
+
+[Integrating Stripe Elements with Angular](https://developer.fireflysemantics.com/tasks/tasks--angular--integrating-stripe-elements-with-angular)
+
+## Stackblitz
+
+[Stackblitz Demo](https://stackblitz.com/edit/angular-stripe-integration-fs)
 
 ## Usage
 
@@ -21,7 +29,12 @@ Stripe service for for Angular components that use stripe.
 }
 ```
 
-## Stackblitz Demo
+## Why?
 
-https://stackblitz.com/edit/angular-stripe-integration?file=src%2Fapp%2Fapp.component.ts
+The `@fireflysemantics/angular-stripe-service` service injects the Stripe scripts for us and waits for it to load before attempting to initialize elements.
 
+The reason this is important is that if our component containing the Stripe form is loaded before Stripe has a chance to initialize elements then the form will not paint correctly.
+
+In other words the Stripe API download and subsequent elements construction is racing the construction of the credit card form component.
+
+If the form component wins that race, the component does not get constructed right, because elements is not yet available.
