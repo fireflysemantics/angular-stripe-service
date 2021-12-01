@@ -25,6 +25,7 @@ const STRIPE_API_URL = "https://js.stripe.com/v3/";
  */
 export class AngularStripeService{
 
+  // @ts-ignore
   private _stripe:StripeFactory = window['Stripe']
   private stripePromise:Promise<any>
 
@@ -58,6 +59,7 @@ export class AngularStripeService{
       script.setAttribute("src", STRIPE_API_URL)      
       head.appendChild(script)      
       script.addEventListener("load",()=>{
+        // @ts-ignore
         this.stripe = window["Stripe"];
         res( this.stripe )
       })
