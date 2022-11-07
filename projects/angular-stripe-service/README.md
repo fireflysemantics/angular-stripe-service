@@ -38,3 +38,7 @@ The reason this is important is that if our component containing the Stripe form
 In other words the Stripe API download and subsequent elements construction is racing the construction of the credit card form component.
 
 If the form component wins that race, the component does not get constructed right, because elements is not yet available.
+
+# Firefly Semantics Slice State Manager
+
+Want simple and lightweight reactive state management for Angular supporting all types, business entities, and object in general then  Checkout [Firefly Semantics Slice](https://www.npmjs.com/package/@fireflysemantics/slice).
